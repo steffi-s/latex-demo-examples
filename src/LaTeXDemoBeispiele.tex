@@ -1,0 +1,24 @@
+% Grafiken einbinden und erstellen
+% Seitenumbrüche zeigen und mehrere Dateien verwenden
+
+\documentclass[a4paper]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+
+% Eigene Befehle definieren
+\newcommand{\fremdwort}[1]{\textsc{#1}}
+\newcommand{\ortsname}[2]{\textsc{#1} {Bundesland \textit{#2}}}
+
+\begin{document}
+	\author{Stefanie Schmidt}
+	\title{LaTeX-Demo Beispiele}
+	\maketitle
+	\newpage
+	\tableofcontents
+	\newpage
+	
+	\include{}
+	
+\end{document}

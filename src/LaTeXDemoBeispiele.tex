@@ -5,6 +5,10 @@
 \usepackage{graphicx}
 \usepackage{float}          % For precise figure placement
 \usepackage{adjustbox}
+\usepackage{tikz}			% For creating own graphics
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{caption}
 
 % Eigene Befehle definieren
 \newcommand{\fremdwort}[1]{\textsc{#1}}
@@ -19,10 +23,12 @@
 	\newpage
 	\listoffigures
 	\newpage
+	\listoftables
+	\newpage
 	
 	\include{roadmap}
 	\include{lists}
-	
+	\include{tabellen}
 	
 	
 

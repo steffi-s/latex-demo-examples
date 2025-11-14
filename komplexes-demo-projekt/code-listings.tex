@@ -1,0 +1,57 @@
+\section{Code-Listings}
+
+LaTeX unterstützt selbstverständlich auch die Darstellung von Code-Listings. Dafür bietet LaTeX mehrere Möglichkeiten, und zwar die Pakete Verbatim, Listings und Minted. Minted ist ein Zusatz-Paket und dürfte bei texlive-core nicht enthalten sein. Hat man hingegen texlive-full installiert, sollte es kein Problem sein. Warum nun drei Pakete zur Auswahl?
+
+Alle drei Pakete haben ihre Berechtigungen, wobei Minted das mächtigste Werkzeug ist. Verbatim stellt Text so dar, wie er eingegeben wurde und kann hilfreich sein, wenn man beispielsweise Text mit vielen Sonderzeichen hat, die man sonst alle mit einem Backslash escapen müsste. Für Code-Listings kann man es zwar benutzen, hat aber keine Möglichkeiten für Syntax-Hervorhebung oder das Anzeigen von Zeilennummern.
+
+Das Listings-Paket kann da schon mehr. Es unterstützt allerdings nur einige Programmiersprachen, z.B. ist JavaScript nicht dabei. Wer Unterstützung für JavaScript benötigt, braucht das Minted-Paket.
+
+Bevor man jedoch das Paket installiert, sollte man sich versichern, dass man die aktuelle Version Python (2.6 oder neuer) und Pygments installiert hat. Beides wird von Minted direkt gebraucht.
+
+Hier ist ein kurzes Beispiel für einen Verbatim-Text.
+
+\begin{verbatim}
+	\begin{verbatim}
+	Hier steht alles so drin, wie es eingegeben wurde, auch die nicht druck-
+	baren Zeichen.
+	Auch Sonderzeichen, wie \ werden ohne Probleme dargestellt. Es sieht
+	    aber nicht unbedingt schön aus.
+    \verb[end{verbatim}]
+\end{verbatim}
+
+Wie bereits auffällt, muss man sich um die Zeilenumbrüche selbst kümmern. Verbatim "überschreibt" quasi alles, was LaTeX normalerweise automatisch macht. Auch die Einrückung muss man selbst machen. Bei langen Listings wird das schnell lästig.
+
+Deshalb ist hier nun ein kurzes Beispiel JavaScript-Beispiel mit dem Minted-Paket.
+
+\begin{listing}
+	\begin{minted}[linenos, fontsize=\small, frame=lines]{javascript}
+// Define a Rectangle object
+function Rectangle(length, width) {
+	this.length = length; // Integer type
+	this.width = width;   // Integer type
+			
+	// Method to calculate the area
+	this.calculateArea = function() {
+		return this.length * this.width;
+	};
+		
+	// Method to calculate the circumference
+	this.calculateCircumference = function() {
+		return 2 * (this.length + this.width);
+	};
+}
+		
+// Instantiate an object called myRect
+const myRect = new Rectangle(10, 5); // Example: length = 10, width = 5
+	
+// Call the calculation functions
+const area = myRect.calculateArea();
+const circumference = myRect.calculateCircumference();
+		
+// Log the results
+console.log("Area: " + area); // Area: 50
+console.log("Circumference: " + circumference); // Circumference: 30
+	\end{minted}
+	\caption{Fläche und Umfang eines Rechtecks in JavaScript berechnen}
+	\label{lst:rechteck-js}
+\end{listing}

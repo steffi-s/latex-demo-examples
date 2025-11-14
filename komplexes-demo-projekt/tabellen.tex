@@ -1,0 +1,24 @@
+\section{Tabellen}
+
+In diesem Abschnitt dreht sich alles um Tabellen und wie man sie mit LaTeX ansprechend und informativ gestalten kann.
+
+Angenommen man möchte als Teamleiter seine Budgetplanung einreichen (macht man wahrscheinlich nicht mit LateX, aber vielleicht ist die Budgetplanung Teil von etwas Größerem), dann möchte man eine Überschrift, mindestens drei Spalten und mehrere Zeilen haben. Die Spalten sollen sprechende Bezeichnungen bekommen, damit man als Leser weiß, welcher Inhalt zu erwarten ist.
+
+	\begin{table}[h!]
+		\centering
+		\caption{Budgetplan für 2026}
+		\begin{tabular}{|l|l|r|}
+			\toprule
+			\textbf{Datum} & \textbf{Art} & \textbf{Betrag} \\
+			\midrule
+			03. Jan.  & KI-Maschine 				 & 10.000 € \\
+			15. März  & 2 neue Arbeitsplätze 		 & 20.000 € \\
+			30. Sept. & Erneuerung Software-Lizenzen & 55.000 € \\
+			21. Dez.  & Weihnachtsfeier 			 &  5.000 € \\
+			\midrule
+			\textbf{Summe:}    &					 & \textbf{90.000 €} \\
+			\bottomrule
+		\end{tabular}	
+\end{table}
+
+Dies ist ein sehr vereinfachtes Beispiel, wie man mit LaTeX Tabellen erstellen kann. Z.B. können die Spaltenüberschriften mehrzeilig sein, oder es können Zellen und Spalten mit einander verschmolzen werden. Das kennt man vielleicht aus Tabellenkalkulationsprogrammen. Im Gegensatz zu diesen muss man das allerdings mit den richtigen Kommandos von Hand vornehmen.

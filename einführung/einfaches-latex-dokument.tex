@@ -1,0 +1,21 @@
+\documentclass[a4paper]{scrartcl} % A4, Artikel
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % UTF8-Encoding verwenden
+\usepackage[ngerman]{babel} % Deutsches Sprachpaket verwenden
+
+\author{Stefanie Schmidt}
+\date{} % Zur Unterdrückung der Datumszeile (das Datum wird standardmäßig eingefügt)
+\title{Ein simples Basisdokument}
+
+\begin{document}
+	
+	\maketitle
+	
+		Hier beginnt der Inhalt des Werks. Alles, was dazu gehört, wird in diesen Bereich geschrieben. Zeilenumbrüche werden von LaTeX automatisch vorgenommen, wenn der Rand des Papiers erreicht wird. Möchte man von Hand einen Absatz einfügen, genügt es nicht, die Enter-Taste einmal zu drücken. LaTeX erkennt einen Absatz an einer Leerzeile. Das ist die Anweisung für den Compiler, einen Zeilenumbruch an der gewünschten Stelle zu erzwingen. Für Absätze, die mit einer Leerzeile im compilierten Dokument von einander getrennt sein sollen, kann man den bigskip-Befehl verwenden (nicht den Backslash davor vergessen!).
+		
+		\bigskip
+   		
+   		Z.B. wie hier. Dieser Teil steht nun in einem neuen Absatz, der mit einer Leerzeile von dem oberen getrennt ist. Dieser Absatz hat keinen Titel. Der bigskip-Befehl ist nicht geeignet für Absätze mit Titel! Dafür gibt des den paragraph- und den section-Befehl.
+	
+	
+\end{document}

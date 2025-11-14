@@ -1,0 +1,43 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{float}          % For precise figure placement
+\usepackage{adjustbox}
+\usepackage{tikz}			% For creating own graphics
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{minted}
+\usepackage{verbatim}
+
+% Eigene Befehle definieren
+\newcommand{\fremdwort}[1]{\textsc{#1}}
+\newcommand{\ortsname}[2]{\textsc{#1} {Bundesland \textit{#2}}}
+
+\author{Stefanie Schmidt}
+\date{}
+\title{LaTeX-Demo Beispiele}
+
+\begin{document}
+	
+	\maketitle
+	\newpage
+	\tableofcontents
+	\newpage
+	\listoffigures
+	\newpage
+	\listoftables
+	\newpage
+	\listoflistings
+	
+	\include{roadmap}
+	\include{lists}
+	\include{tabellen}
+	\include{code-listings}
+	
+	
+
+	
+\end{document}
